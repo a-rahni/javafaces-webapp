@@ -10,9 +10,13 @@
 
     <h:body>
 
+        <h1>#{templateParam}</h1>
+        
         <div style="border-width: 2px; border-color: green; border-style: solid;">
             <ui:insert name="header">
-                <ui:include src="/templates/header.xhtml" />
+                <ui:include src="/templates/header.xhtml">
+                    <ui:param name="headerContent" value="Header par défaut" />
+                </ui:include>
             </ui:insert>
         </div>
 
