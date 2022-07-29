@@ -8,5 +8,9 @@
     <h:body>
         <!-- il automatiquemet passe par le getter getNomAttribut -->
         <h1>#{helloWorld.message}</h1> 
+        <h:form>
+            <!-- redirection: l'url home sera affiché après redirection -->
+            <h:commandButton action="home?faces-redirect=true" value="Page d'accueil" />
+        </h:form>
     </h:body>
 </html>

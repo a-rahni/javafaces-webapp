@@ -37,6 +37,22 @@
                 <!-- si param est null , renvoi value home, on peut spprimer la ligne au dessus -->
             </h:commandLink>
         </h:form>
+        
+        
+        <br />
+
+        <h1>Forward vs Redirect</h1>
+        <hr />
+
+        <h3>Forward</h3>
+        <h:form>
+            <h:commandButton action="hello" value="Forward sur la page hello" />
+        </h:form>
+
+        <h3>Redirect</h3>
+        <h:form>
+            <h:commandButton action="hello?faces-redirect=true" value="Redirection sur la hello" />
+        </h:form>
 
     </h:body>
 </html>
