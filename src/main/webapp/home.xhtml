@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html" >
     <h:head>
         <title>Navigation implicite</title>
     </h:head>
     <h:body>
         <h1>Navigation implicite</h1>
-        <!--URL reste sur Home lors de l'affichage de la page hello -->
         <hr />
 
         <h3>Aller vers la page hello (via ManagedBean)</h3>
@@ -18,6 +18,24 @@
         <h3>Aller vers la page 2</h3>
         <h:form>
             <h:commandButton action="page2" value="Aller sur la page 2" />
+        </h:form>
+
+        <h1>Navigation conditionnelle</h1>
+        <hr />
+
+        <h:form>
+            <h:commandLink action="#{navigationController.goToPage}" value="Aller sur la page hello">
+                <f:param name="pageId" value="hello" />
+            </h:commandLink>
+            <hr />
+            <h:commandLink action="#{navigationController.goToPage}" value="Aller sur la page 2">
+                <f:param name="pageId" value="page2" />
+            </h:commandLink>
+            <hr />
+            <h:commandLink action="#{navigationController.goToPage}" value="Aller sur la page d'acceuil">
+                <f:param name="pageId" value="home" />
+                <!-- si param est null , renvoi value home, on peut spprimer la ligne au dessus -->
+            </h:commandLink>
         </h:form>
 
     </h:body>
