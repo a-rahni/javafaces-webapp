@@ -5,12 +5,13 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Mon 1er data table</title>
+        <link rel="stylesheet" type="text/css" href="css/style1.css" />
     </h:head>
     <h:body>
         <h1>Exemple data table</h1>
 
         <h:form>
-            <h:dataTable value="#{userData.employees}" var="employee">
+            <h:dataTable value="#{userData.employees}" var="employee" class="table1">
 
                 <h:column>
                     <f:facet name="header">Name</f:facet>
