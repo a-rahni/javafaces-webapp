@@ -1,41 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package fr.m2i.jsfwebapp;
 
-import java.util.Date;
-
-
-/**
- *
- * @author rahni
- */
 public class Adherent {
     
-    public static final String HOMME ="h";
-    public static final String FEMME ="f";
-    
     private int id;
-    private String nom;
-    private String prenom;
-    private Date dateNaissance;
-    private String ville;
-    private String loisir;
-    private String sexe;
+    private String lastname;
+    private String firstname;
+    private String birthdate;
+    private String city;
+    private String hobby;
+    private String gender;
 
-    public Adherent(int id, String nom, String prenom, Date dateNaissance, String ville, String loisir, String sexe) {
-        this.id = id;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.dateNaissance = dateNaissance;
-        this.ville = ville;
-        this.loisir = loisir;
-        this.sexe = sexe;
-    }
-    
-    public Adherent(){
+    public Adherent() {
         
+    }
+
+    public Adherent(int id, String lastname, String firstname, String birthdate, String city, String hobby, String gender) {
+        this.id = id;
+        this.lastname = lastname;
+        this.firstname = firstname;
+        this.birthdate = birthdate;
+        this.city = city;
+        this.hobby = hobby;
+        this.gender = gender;
     }
 
     public int getId() {
@@ -46,54 +32,52 @@ public class Adherent {
         this.id = id;
     }
 
-    public String getNom() {
-        return nom;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
-    public String getPrenom() {
-        return prenom;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public Date getDateNaissance() {
-        return dateNaissance;
+    public String getBirthdate() {
+        return birthdate;
     }
 
-    public void setDateNaissance(Date dateNaissance) {
-        this.dateNaissance = dateNaissance;
+    public void setBirthdate(String birthdate) {
+        this.birthdate = birthdate;
     }
 
-    public String getVille() {
-        return ville;
+    public String getCity() {
+        return city;
     }
 
-    public void setVille(String ville) {
-        this.ville = ville;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public String getLoisir() {
-        return loisir;
+    public String getHobby() {
+        return hobby;
     }
 
-    public void setLoisir(String loisir) {
-        this.loisir = loisir;
+    public void setHobby(String hobby) {
+        this.hobby = hobby;
     }
 
-    public String getSexe() {
-        return sexe;
+    public String getGender() {
+        return gender;
     }
 
-    public void setSexe(String sexe) {
-        this.sexe = sexe;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
-    
-    
-    
+
 }

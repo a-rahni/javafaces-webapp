@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Adhérents du club</title>
+        <link rel="stylesheet" type="text/css" href="css/style1.css" />
+    </h:head>
+    <h:body>
+        <h1>Liste des adhérents</h1>
+
+        <h:form>
+            <h:dataTable value="#{adherentData.adherents}" var="a">
+
+                <h:column>
+                    <f:facet name="header">Nom</f:facet>
+                    <h:outputText value="#{a.lastname}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Prénom</f:facet>
+                    <h:outputText value="#{a.firstname}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Date de naissance</f:facet>
+                    <h:outputText value="#{a.birthdate}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Ville</f:facet>
+                    <h:outputText value="#{a.city}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Loisir</f:facet>
+                    <h:outputText value="#{a.hobby}" />
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Genre</f:facet>
+                    <h:outputText value="#{a.gender}" />
+                </h:column>
+
+            </h:dataTable>
+            
+            <h3>Ajouter un adhérent</h3>
+            <hr />
+
+            <h:commandButton action="signup?faces-redirect=true" value="Inscription" />
+        </h:form>
+
+    </h:body>
+</html>
