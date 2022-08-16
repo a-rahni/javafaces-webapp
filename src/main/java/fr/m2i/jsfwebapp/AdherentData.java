@@ -27,9 +27,41 @@ public class AdherentData {
     }
 
     public String onSave() {
+        adherent.setId(adherents.size());
         adherents.add(adherent);
         adherent = new Adherent();
         return "listAdherent?faces-redirect=true";
+    }
+
+    public String onSelect(int id) {
+        adherent = getAdherentById(id);
+        return "update";
+    }
+    
+    public void onDelete(int id) {
+        Adherent toDelete = getAdherentById(id);
+
+        if (toDelete != null) {
+            adherents.remove(toDelete);
+        }
+
+        adherent = new Adherent();
+    }
+    
+    public String onUpdate() {
+        adherent = new Adherent();
+        return "listAdherent";
+    }
+    
+    public Adherent getAdherentById(int id) {
+
+        for (Adherent a : adherents) {
+            if (a.getId() == id) {
+                return a;
+            }
+        }
+        
+        return null;
     }
 
     public List<Adherent> getAdherents() {

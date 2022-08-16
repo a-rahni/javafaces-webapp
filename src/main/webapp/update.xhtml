@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html" >
+    <h:head>
+        <title>Inscription au club</title>
+    </h:head>
+
+    <h:body>
+        <h:form>
+
+            <fieldset>
+                <legend>Mise à jour</legend>
+                <h:panelGrid columns="2">
+
+                    <h:outputLabel value="Nom" />
+                    <h:inputText value="#{adherentData.adherent.lastname}" />
+
+                    <h:outputLabel value="Prénom" />
+                    <h:inputText value="#{adherentData.adherent.firstname}" />
+
+                    <h:outputLabel value="Date de naissance" />
+                    <h:inputText value="#{adherentData.adherent.birthdate}" />
+
+                    <h:outputLabel value="Ville" />
+                    <h:selectOneMenu value="#{adherentData.adherent.city}">
+                        <f:selectItem itemLabel="Paris" itemValue="Paris" />
+                        <f:selectItem itemLabel="Marseille" itemValue="Marseille" />
+                        <f:selectItem itemLabel="Toulouse" itemValue="Toulouse" />
+                        <f:selectItem itemLabel="Lyon" itemValue="Lyon" />
+                        <f:selectItem itemLabel="Tours" itemValue="Tours" />
+                        <f:selectItem itemLabel="Châteauroux" itemValue="Châteauroux" />
+                    </h:selectOneMenu>
+
+                    <h:outputLabel value="Loisirs" />
+                    <h:selectOneMenu value="#{adherentData.adherent.hobby}">
+                        <f:selectItem itemLabel="Football" itemValue="Football" />
+                        <f:selectItem itemLabel="Boxe Anglaise" itemValue="Boxe Anglaise" />
+                        <f:selectItem itemLabel="Gaming" itemValue="Gaming" />
+                    </h:selectOneMenu>
+                    
+                    <h:outputLabel value="Genre" />
+                    <h:selectOneRadio value="#{adherentData.adherent.gender}">
+                        <f:selectItem itemLabel="Femme" itemValue="Femme" />
+                        <f:selectItem itemLabel="Homme" itemValue="Homme" />
+                    </h:selectOneRadio>
+
+                    <h:commandButton action="#{adherentData.onUpdate}" value="Modifier" />
+                </h:panelGrid>
+            </fieldset>
+
+        </h:form>
+
+    </h:body>
+</html>
