@@ -28,46 +28,36 @@
                 <table>
                 <tr>
                     <td>Name :</td>
-                    <td><h:inputText value="#{adherentData.nom}" /></td>
+                    <td> <h:outputLabel value="#{adherentData.nom}" /> </td>
                 </tr>
                 <tr>
                     <td>Prenom :</td>
-                    <td><h:inputText value="#{adherentData.prenom}" /></td>
+                    <td><h:outputLabel value="#{adherentData.prenom}" /> </td>
                 </tr>
                 <tr>
                     <td>Date de Naissance :</td>
                     <td>
-                        <h:inputText id = "dateInput" value = "#{adherentData.dateNaissance}"
-                        label = "Date" >
-                        <f:convertDateTime pattern = "dd-mm-yyyy" />
-                        </h:inputText>
+                        <h:outputLabel value = "#{adherentData.dateNaissance}"> </h:outputLabel>
                     </td>
                 </tr>
                     
                 <tr>
                     <td>Ville :</td>
                     <td>
-                        <h:selectOneMenu value="#{adherentData.ville}">
-                        <f:selectItem itemValue="Paris" itemLabel="Paris" />
-                        <f:selectItem itemValue="Lyon" itemLabel="Lyon" />
-                        <f:selectItem itemValue="Nantes" itemLabel="Nantes" />
-                     </h:selectOneMenu>
+                        <h:outputLabel value="#{adherentData.ville}"> </h:outputLabel>
                     </td>
                 </tr>
                     
                 <tr>
                     <td>Sexe :</td>
                     <td>
-                     <h:selectOneRadio value="#{adherentData.sexe}">
-                            <f:selectItem itemValue="Homme" itemLabel="Homme" />
-                            <f:selectItem itemValue="Femme" itemLabel="Femme" />
-                    </h:selectOneRadio>
+                        <h:outputLabel value="#{adherentData.sexe}"> </h:outputLabel>
                     </td>
                 </tr>
                
                 <tr>
-                    <td></td>
-                    <td><h:commandButton value="Add Adherent" action="#{adherentData.goToValidate}" /></td>
+                    <td><h:commandButton action="inscription?faces-redirect=true" value="corriger" /></td>
+                    <td><h:commandButton value="Valider" action="#{adherentData.addAdherent}" /></td>
                 </tr>
             </table>
                 

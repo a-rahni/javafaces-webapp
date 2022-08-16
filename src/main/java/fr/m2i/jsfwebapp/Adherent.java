@@ -16,6 +16,7 @@ public class Adherent {
     public static final String HOMME ="h";
     public static final String FEMME ="f";
     
+    private int id;
     private String nom;
     private String prenom;
     private Date dateNaissance;
@@ -23,7 +24,8 @@ public class Adherent {
     private String loisir;
     private String sexe;
 
-    public Adherent(String nom, String prenom, Date dateNaissance, String ville, String loisir, String sexe) {
+    public Adherent(int id, String nom, String prenom, Date dateNaissance, String ville, String loisir, String sexe) {
+        this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.dateNaissance = dateNaissance;
@@ -34,6 +36,14 @@ public class Adherent {
     
     public Adherent(){
         
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNom() {
