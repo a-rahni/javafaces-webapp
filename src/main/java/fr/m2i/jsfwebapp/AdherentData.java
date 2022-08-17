@@ -52,6 +52,13 @@ public class AdherentData {
         adherent = new Adherent();
         return "listAdherent";
     }
+    /* autre manière de 'updater (au lieu de passer l'iD, passer l'objet adherent modifier en param)*/
+    //public String onUpdate(Adherent a) {
+       // int index =adherents.indexOf(a);
+        // recuperer l'indexe de l'objet et update
+       // adherents.set(index, newObjet); // dans la bonne methode ...   
+      //  return "";
+    //}
     
     public Adherent getAdherentById(int id) {
 
