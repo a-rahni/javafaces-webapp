@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Mon 1er data table</title>
+        <link rel="stylesheet" type="text/css" href="css/style1.css" />
+    </h:head>
+    <h:body>
+        <h1>Exemple data table</h1>
+
+        <h:form>
+            <h:dataTable value="#{userData.employees}" var="employee" class="table1">
+
+                <h:column>
+                    <f:facet name="header">Name</f:facet>
+                        #{employee.name}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Department</f:facet>
+                        #{employee.department}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Age</f:facet>
+                        #{employee.age}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">Salary</f:facet>
+                        #{employee.salary}
+                </h:column>
+
+            </h:dataTable>
+            
+            <h3> Add Employee</h3>
+            <hr />
+            
+            <table>
+                <tr>
+                    <td>Name :</td>
+                    <td><h:inputText value="#{userData.name}" /></td>
+                </tr>
+                <tr>
+                    <td>Department :</td>
+                    <td><h:inputText value="#{userData.department}" /></td>
+                </tr>
+                <tr>
+                    <td>Age :</td>
+                    <td><h:inputText value="#{userData.age}" /></td>
+                </tr>
+                <tr>
+                    <td>Salary :</td>
+                    <td><h:inputText value="#{userData.salary}" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><h:commandButton value="Add employee" action="#{userData.addEmployee}" /></td>
+                </tr>
+            </table>
+            
+        </h:form>
+
+    </h:body>
+</html>
